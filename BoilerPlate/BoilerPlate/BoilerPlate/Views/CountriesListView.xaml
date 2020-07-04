@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:baseViewModel="clr-namespace:BoilerPlate.ViewModels.Base;assembly=BoilerPlate"
+              Title="CountriesList"
+             mc:Ignorable="d"
+             baseViewModel:ViewModelLocator.AutoWireViewModel="True"
+             x:Class="BoilerPlate.Views.CountriesListView">
+    <ContentPage.Content>
+        
+                <ListView  SeparatorColor="{x:StaticResource ThemeColor}"  Margin="40,0,40,0"  x:Name="langList"  ItemsSource="{ Binding CountryList}" BackgroundColor="Transparent"
+                      
+                     
+                      >
+
+
+
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell>
+                                <RelativeLayout   HorizontalOptions="FillAndExpand"  >
+
+
+                                    <Label  Text="{Binding Name}"  RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"  Padding="0,10,0,0"  HorizontalOptions="CenterAndExpand"  FontSize="Body" TextColor="Black"/>
+
+
+                                    <Image    Source="lang_select_mark.png"   RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1,Constant=0}" Margin="0,10,10,0" HeightRequest="20" WidthRequest="20" IsVisible="false" HorizontalOptions="EndAndExpand"  />
+
+
+
+
+                                </RelativeLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+
+       
+
+
+    </ContentPage.Content>
+</ContentPage>
