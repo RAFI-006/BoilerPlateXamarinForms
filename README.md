@@ -1,6 +1,4 @@
 # BoilerPlateXamarinForms
-
-This Code Contain basic get call fetchign countries list.
 This is Pure MVVM architecture benificial for beginners to understand the flow.
 
 Code Contains
